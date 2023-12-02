@@ -3,7 +3,7 @@ use crate::util::fs_util::read_lines;
 mod util;
 
 fn main() {
-    println!("{}", day_2_cube_conundrum());
+    println!("{}", day_2_cube_conundrum_part_2());
 }
 
 fn day_1_trebuchet() -> i32 {
@@ -121,4 +121,57 @@ fn day_2_cube_conundrum() -> i32 {
     }
 
     sum_of_ids
+}
+
+fn day_2_cube_conundrum_part_2() -> i32 {
+    let lines = read_lines("./inputs/day_2/values.txt").unwrap();
+
+    let mut sum_of_powers = 0;
+
+    for line in lines {
+        let line = line.unwrap();
+
+        let (_, inputs) = line.split_once(":").unwrap();
+
+        let attempts: Vec<&str> = inputs.split(";").collect();
+
+        let mut max_red_cubes = 0;
+        let mut max_green_cubes = 0;
+        let mut max_blue_cubes = 0;
+
+        for attempt in attempts {
+            let inputs: Vec<&str> = attempt.split(",").collect();
+
+            for input in inputs {
+                let (count, color) = input.trim().split_once(" ").unwrap();
+
+                let count = count.parse::<i32>().unwrap();
+
+                match color {
+                    "red" => {
+                        if count > max_red_cubes {
+                            max_red_cubes = count.clone();
+                        }
+                    }
+                    "green" => {
+                        if count > max_green_cubes {
+                            max_green_cubes = count.clone();
+                        }
+                    }
+                    "blue" => {
+                        if count > max_blue_cubes {
+                            max_blue_cubes = count.clone();
+                        }
+                    }
+                    _ => {}
+                };
+            }
+        }
+
+        let game_power = max_red_cubes * max_green_cubes * max_blue_cubes;
+
+        sum_of_powers = sum_of_powers + game_power;
+    }
+
+    sum_of_powers
 }
