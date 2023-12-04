@@ -141,7 +141,7 @@ pub fn day_3_gear_ratios() -> i32 {
                         value: value.iter().collect::<String>().parse().unwrap(),
                     });
 
-                    // reset values
+                    // reset values.txt
                     start_index = -1;
                     end_index = -1;
                     value = Vec::new();
@@ -159,7 +159,7 @@ pub fn day_3_gear_ratios() -> i32 {
                 value: value.iter().collect::<String>().parse().unwrap(),
             });
 
-            // reset values
+            // reset values.txt
             start_index = -1;
             end_index = -1;
             value = Vec::new();
@@ -223,7 +223,7 @@ pub fn day_3_gear_ratios_part_2() -> i32 {
                         value: value.iter().collect::<String>().parse().unwrap(),
                     });
 
-                    // reset values
+                    // reset values.txt
                     start_index = -1;
                     end_index = -1;
                     value = Vec::new();
@@ -241,7 +241,7 @@ pub fn day_3_gear_ratios_part_2() -> i32 {
                 value: value.iter().collect::<String>().parse().unwrap(),
             });
 
-            // reset values
+            // reset values.txt
             start_index = -1;
             end_index = -1;
             value = Vec::new();

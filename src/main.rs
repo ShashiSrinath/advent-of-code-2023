@@ -1,8 +1,8 @@
-use crate::days::day_3::day_3_gear_ratios_part_2;
+use crate::days::day_4::day_4_scratchcards;
 
 mod days;
 mod util;
 
 fn main() {
-    println!("{}", day_3_gear_ratios_part_2());
+    println!("{}", day_4_scratchcards());
 }
