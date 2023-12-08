@@ -1,8 +1,8 @@
-use crate::days::day_4::day_4_scratchcards_part2;
+use crate::days::day_5::day_5_fertilizer;
 
 mod days;
 mod util;
 
 fn main() {
-    println!("{}", day_4_scratchcards_part2());
+    println!("{}", day_5_fertilizer());
 }
