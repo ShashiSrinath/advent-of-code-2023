@@ -1,8 +1,14 @@
-use crate::days::day_5::day_5_fertilizer_part_2;
+use std::time::Instant;
+
+use crate::days::day_6::day_6_boat_race_part_2;
 
 mod days;
 mod util;
 
 fn main() {
-    println!("{}", day_5_fertilizer_part_2());
+    let now = Instant::now();
+
+    println!("{}", day_6_boat_race_part_2());
+
+    println!("Time: {:?}", now.elapsed());
 }
