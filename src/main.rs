@@ -1,6 +1,6 @@
 use std::time::Instant;
 
-use crate::days::day_7::day_7_camel_cards_part2;
+use crate::days::day_8::day_8_haunted_wasteland;
 
 mod days;
 mod util;
@@ -8,7 +8,7 @@ mod util;
 fn main() {
     let now = Instant::now();
 
-    println!("{}", day_7_camel_cards_part2());
+    println!("{}", day_8_haunted_wasteland());
 
     println!("Time: {:?}", now.elapsed());
 }
